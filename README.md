@@ -2,4 +2,8 @@
 CSCI4511W Final Project
 
 ## The Plan
-The plan is to use Stable Baselines3 and PettingZoo Pong to compare different RL algorithms and how they perform against each other. Also want to use TensorBoard for graphing results/metrics.
+Using PettingZoo chess for the environment and Stable Baselines3 for the Masked PPO model.
+
+Planning to tweak values of Masked PPO to find optimal RL algorithm for chess as they compete in a tournament.
+
+Might use TensorBoard for metrics/results
