@@ -1,0 +1,5 @@
+chess
+gymnasium
+sb3_contrib
+pettingzoo
+pygame

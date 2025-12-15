@@ -137,7 +137,6 @@ def eval_action_mask(env_fn, num_games=100, render_mode=None, **env_kwargs):
             observation, action_mask = obs.values()
 
             if termination:
-                print("Game ended properly")
                 # If there is a winner, keep track, otherwise don't change the scores (tie)
                 if (
                     env.rewards[env.possible_agents[0]]
@@ -154,7 +153,6 @@ def eval_action_mask(env_fn, num_games=100, render_mode=None, **env_kwargs):
                 round_rewards.append(env.rewards)
                 break
             elif truncation:
-                print("Game ended due to truncation")
                 break
             else:
                 if agent == env.possible_agents[0]:
@@ -197,5 +195,5 @@ if __name__ == "__main__":
     # Evaluate 100 games against a random agent (winrate should be ~80%)
     eval_action_mask(env_fn, num_games=100, render_mode=None, **env_kwargs)
 
-    # Watch two games vs a random agent
+    # Watch two games
     eval_action_mask(env_fn, num_games=2, render_mode="human", **env_kwargs)
